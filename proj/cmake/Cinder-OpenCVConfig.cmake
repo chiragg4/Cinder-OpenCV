@@ -3,10 +3,11 @@ if(NOT TARGET Cinder-OpenCV)
     get_filename_component(Cinder-OpenCV_PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
 
     # Define ${CINDER_PATH} as usual.
-    get_filename_component(CINDER_PATH "${Cinder-Notifications_PROJECT_ROOT}/../.." ABSOLUTE)
+    get_filename_component(CINDER_PATH "${Cinder-OpenCV_PROJECT_ROOT}/../.." ABSOLUTE)
 
     # Make a list of source files and define that to be ${SOURCE_LIST}.
     file(GLOB SOURCE_LIST CONFIGURE_DEPENDS
+            "${Cinder-OpenCV_PROJECT_ROOT}/include/CinderOpenCV.h"
             )
 
     # Create the library!
